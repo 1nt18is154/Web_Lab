@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .head{
+            color:lightgreen;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: medium;
+        }
+        .btn1{
+            background-color: green;
+            color:black;
+            width:40px;
+            height:20px;
+            font-size:smaller;
+            padding: none;
+        }
+        div{
+            margin-top:10px;
+            background-color: red;
+            width: 500px;
+        }
+        p{
+            font-size:small;
+            color:black;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+    <script>
+
+   function func1(){
+       var colors=['goal','new','user','sit','eat','dinner'];
+       var c= 'e'
+       var pattern=new RegExp(c);
+    const filteredarr=colors.filter(item=>!pattern.test(item))
+     document.getElementById("p1").innerHTML="Array elements are: "+colors+"<br>"+"After filtering: "+filteredarr;
+   }
+   function func2(){
+    var colors=['goal','new','user','sit','eat','dinner'];
+       var pattern1=new RegExp(/^([a-z]*)e([a-z]*)n([a-z]*)$/);
+       var pattern2=new RegExp(/^([a-z]*)n([a-z]*)e([a-z]*)$/);
+       var final=new RegExp(pattern1.source+ "|" + pattern2.source);
+    const filteredarr=colors.filter(item=>final.test(item))
+     document.getElementById("p2").innerHTML="Array elements are: "+colors+"<br>"+"After filtering: "+filteredarr;
+   }
+   function func3(){
+       var colors=['lovely','\ndentist','2 lonely','eden','fly\n','dent'];
+       var pattern1=new RegExp(/^den\w*$/);
+       var pattern2=new RegExp(/^\w*ly$/);
+       var final=new RegExp(pattern1.source+ "|" + pattern2.source);
+    const filteredarr=colors.filter(item=>final.test(item))
+     document.getElementById("p3").innerHTML="Array elements are: "+colors+"<br>"+"After filtering: "+filteredarr;
+   }
+   function func4(){
+    var pattern=/^hand/g; 
+    var check=/^hand\w+$/;                                                                                       ;
+    pattern.compile(pattern);
+       var arr2=['handed','hand','handy','unhanded','handle','hand-2'];
+    const newarr2=arr2.map(item=>{
+        if(check.test(item))
+        return item.replace(pattern,"X")
+        else return item})
+       document.getElementById("p4").innerHTML="Array elements are: "+arr2+"<br>"+"After replacing: "+newarr2;
+    }
+   function func5(){
+       var str= "refused reed redo received";
+       var p=/removed|reed|refused|received/gi;
+       p.compile(p);
+      var newstr=str.replace(p,"X");
+       document.getElementById("p5").innerHTML="String is: "+str+"<br>"+"After replacing: "+newstr;
+
+   }
+   function func6(){
+    var str= "th\\er\\e ar\\e common asp\\ects among th\\e alt\\ernations";
+       var p=/\\e/gi;
+       p.compile(p);
+      var newstr=str.replace(p,"e");
+       document.getElementById("p6").innerHTML="String is: "+str+"<br>"+"After replacing: "+newstr; 
+   }
+    </script>
+</head>
+<body>
+    <div style="background-color:red ; text-align: center;margin-left: 25rem;margin-top: 5rem"  >
+    	<h3>Web Assignment</h3>
+    	<h3>Sohan Sabat</h3>
+    <div class="class1">
+        <h class="head"> Filter all elements that do not contain e </h>
+        <p id="p1"></p>
+        <button class="btn1" onclick="func1();">Try</button>
+    </div>
+    <div class="class2">
+        <h class="head"> Filter all elements that contains both <i>e</i> and <i>n</i> in it:</h>
+        <p id="p2"></p>
+        <button class="btn1" onclick="func2();">Try</button>
+    </div>
+    <div class="class3">
+        <h class="head"> Filter all elements that <i>start with den</i> or<i> end with ly</i>:</h>
+        <p id="p3"></p>
+        <button class="btn1" onclick="func3();">Try</button>
+    </div>
+    <div class="class4">
+        <h class="head">Replace hand with X for all words that start with hand followed by at least one word characte</h>
+        <p id="p4"></p>
+        <button class="btn1" onclick="func4();">Try</button>
+    </div>
+    <div class="class5">
+        <h class="head">Replace all occurrences of <i>removed</i> or <i>reed</i> or <i>received</i> or <i>refused</i> with X</h>
+        <p id="p5"></p>
+        <button class="btn1" onclick="func5();">Try</button>
+    </div>
+    <div class="class6">
+        <h class="head">Replace all occurrences of \e with e </h>
+        <p id="p6"></p>
+        <button class="btn1" onclick="func6();">try</button>
+    </div>
+    </div>
+</body>
+</html>
