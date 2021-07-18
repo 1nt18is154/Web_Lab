@@ -4,7 +4,7 @@
 //let objName={p1:v1,p2:v2,.....,m1:function{}}
 
 let emp = {
-    name : 'asha',
+    name : 'sohan',
     id: 16,
     sal:200000
 }
@@ -65,7 +65,7 @@ function enginess(cylinders,size,model){
     this.size=size;
     this.model=model;
 }
-let e=new enginess(4,5.3,'ash');
+let e=new enginess(4,5.3,'soh');
 let c=new carss('white',4,2021,e);
 
 console.log(c);
