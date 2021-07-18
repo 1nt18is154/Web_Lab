@@ -1,7 +1,7 @@
 //map
 let capitals=new Map() //empty map
 capitals.set('bangalore','ka');
-capitals.set('mumbai','mh');
+capitals.set('delhi','dl');
 //capitals.set('bangalore','kr');//no duplicate KV pairs are stored
 
 console.log(capitals);
@@ -45,8 +45,8 @@ console.log(a)
 console.log(m)
 
 /*let cap=new Map()
-cap.set('kohli','india')
-cap.set('morgan','england')
+cap.set('Yılmaz','türkiye')
+cap.set('Kane','england')
 console.log(cap)
 
 //Iteration of map using forEach
@@ -58,8 +58,8 @@ console.log(o instanceof Map)
 
 //adding objects to the map
 /*let map=new Map()
-let o1={name:'Adarsh'}
-let o2={name:'Ashwini'}
+let o1={name:'Sohan'}
+let o2={name:'Navneet'}
 map.set(o1,'Hegde')
 map.set(o2,'Hegde')
 console.log(map)
