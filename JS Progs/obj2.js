@@ -38,6 +38,6 @@ function dis1(){
     console.log(`salary is ${this.sal}`);
 }
 
-let e=new emp('Asha','Madguni',100000)
+let e=new emp('Sohan','Sabat',100000)
 e.display();
 e.dis();
