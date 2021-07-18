@@ -2,8 +2,8 @@
 //old js
 
 var person = {
-    name:'asha',
-    age:20,
+    name:'Sohan',
+    age:21,
     sayDetails:function()
     {
         console.log('Name is ' +this.name+' age is '+this.age)
@@ -19,8 +19,8 @@ person.sayDetails();
 
 //ES-6
 let user = {
-    name:'asha',
-    age:20,
+    name:'Sohan',
+    age:21,
     sayDetails:function()
     {
         console.log('Name is ' +this.name+' age is '+this.age)
