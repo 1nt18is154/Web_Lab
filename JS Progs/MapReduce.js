@@ -60,7 +60,7 @@ console.log(o instanceof Map)
 /*let map=new Map()
 let o1={name:'Sohan'}
 let o2={name:'Navneet'}
-map.set(o1,'Hegde')
-map.set(o2,'Hegde')
+map.set(o1,'Sabat')
+map.set(o2,'Bhat')
 console.log(map)
 console.log(map.entries())*/
